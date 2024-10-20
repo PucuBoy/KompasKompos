@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title style="font-family: 'Open Sans', sans-serif;">Kompos</title>
+</head>
+    <body>
+        <header class="header">
+            <div class="intro">
+                <h1>Welcome to Selamat datang</h1>
+            </div>
+            <div class="angle-down-icon">
+                <a href="#home"><i class="fas fa-angle-down"></i></a>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <div class="logo">
+                    <a href="#home"><img width="50px" height="auto" src="/assets/kompos._logo.png" alt="Kompos Logo"></a>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="home">
+
+            <section class="intro-section">
+                <div class="container">
+                    <h2>Apa itu Kompos?</h2>
+                    <p>Kompos adalah hasil dari penguraian bahan organik oleh mikroorganisme. Proses ini menghasilkan material yang kaya akan nutrisi untuk menyuburkan tanah dan memperbaiki struktur tanah. Kompos juga membantu mengurangi sampah organik yang dibuang ke tempat pembuangan akhir.</p>
+                </div>
+            </section>
+
+            <section class="card-section">
+                <div class="card">
+                    <img src="/assets/kompos1.jpg" alt="Kompos Card 1" width="100%">
+                    <h2>Card 1</h2>
+                    <p>Pengenalan Kompos</p>
+                    <a href="contents/card1.html">Read More</a> 
+                </div>
+                <div class="card">
+                    <img src="/assets/kompos2.jpg" alt="Kompos Card 2" width="100%">
+                    <h2>Card 2</h2>
+                    <p>Manfaat Kompos</p>
+                    <a href="contents/card2.html">Read More</a> 
+                </div>
+                <div class="card">
+                    <img src="/assets/kompos3.jpg" alt="Kompos Card 3" width="100%">
+                    <h2>Card 3</h2>
+                    <p>Cara Membuat Kompos</p>
+                    <a href="contents/card3.html">Read More</a> 
+                </div>
+            </section>
+        </main>
+        
+        
+
+        <section id="about" class="about-section">
+            <p class="container">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit pretium porttitor. Mauris sem eros, laoreet nec porta nec, convallis et orci. Quisque at elit turpis. In lacinia aliquet enim, a convallis diam egestas vel. Vivamus vulputate odio eget leo maximus suscipit. In a finibus magna, laoreet auctor eros. In mauris leo, sagittis a velit eleifend, aliquam vulputate orci. Curabitur malesuada libero feugiat, sollicitudin erat et, pretium enim. Morbi a tellus nunc. Duis ligula libero, dictum at orci in, accumsan feugiat est.</p>
+
+                <p>Nulla facilisi. Quisque at malesuada massa, sed dictum magna. Nulla vel ante laoreet, pharetra arcu ut, feugiat diam. Cras ut scelerisque massa, at porttitor neque. Praesent consequat euismod lorem, eu tempor orci facilisis id. Aenean sapien turpis, vehicula in auctor ac, congue luctus diam. Maecenas placerat nibh quis lorem interdum hendrerit. Aliquam placerat, felis ut consequat pretium, quam felis viverra ex, in vestibulum purus diam nec purus. Donec pharetra tellus at elit bibendum, eu accumsan massa finibus.</p>
+                    
+                <p>Sed eu magna tempus felis porta molestie. Proin dictum massa quis est blandit dapibus. Pellentesque id odio et mi dictum laoreet at ut mi. Curabitur commodo, sapien at varius iaculis, nibh diam posuere elit, id porttitor neque quam non nibh. Vestibulum feugiat, dui non laoreet pellentesque, lectus risus vehicula risus, scelerisque maximus dolor ex quis felis. In hac habitasse platea dictumst. Sed eget accumsan lorem, ut semper risus. Sed urna turpis, elementum non vestibulum vitae, consequat nec mauris. Pellentesque ut malesuada velit, eu semper turpis. Aenean id rhoncus lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat.</p>                
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Jika kamu mempunyai pertanyaan bla bla bla </p>
+                
+                <!-- Contact Form  -->
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                
+                <!-- Team Profiles -->
+                <div class="team">
+                    <h3>Our Team</h3>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <img src="/assets/foto1.jpg" alt="Member 1" width="100" height="100">
+                            <h4>Member 1</h4>
+                            <p>Role: Developer</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="/assets/foto2.jpg" alt="Member 2" width="100" height="100">
+                            <h4>Member 2</h4>
+                            <p>Role: Designer</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="/assets/foto3.jpg" alt="Member 3" width="100" height="100">
+                            <h4>Member 3</h4>
+                            <p>Role: Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const navbarHeight = document.querySelector("nav").offsetHeight;
+
+                // Smooth scroll for all nav links and angle-down icon
+                document.querySelectorAll("nav a, .angle-down-icon a").forEach(anchor => {
+                    anchor.addEventListener("click", function(event) {
+                        const targetId = this.getAttribute("href").substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            event.preventDefault();
+                            window.scrollTo({
+                                top: targetElement.offsetTop - navbarHeight,
+                                behavior: "smooth"
+                            });
+                        }
+                    });
+                });
+            });
+
+        </script>
+    </body>
+</html>
