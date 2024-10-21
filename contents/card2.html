@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>card2</title>
-</head>
-<body>
-    
-</body>
+    <title>Timnas Sepak Bola Indonesia</title>
+    <link rel="stylesheet" href="card.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container container">
+            <ul class="menu-items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#pengenalan">Pengenalan</a></li>
+                <li><a href="#pengertian">Pengertian</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <main>
+      
+        <article id="Manfaat">
+          <h2>Manfaat</h2>
+
+            <img
+              src="assets/fotopildun.jpg"
+              alt="1. Mengurangi Sampah Rumah Tangga"
+              class="featured-image"
+            />
+            <p>
+                Kompos membantu mengurangi jumlah limbah organik rumah tangga yang biasanya berakhir di tempat pembuangan sampah. Sisa makanan, daun, dan bahan organik lain yang dibuang setiap hari dapat diubah menjadi kompos alih-alih menjadi sampah.
+                Dengan mengomposkan bahan organik ini, jumlah sampah yang perlu dikelola oleh sistem pengelolaan sampah menjadi lebih kecil. Ini juga membantu mengurangi tumpukan sampah di tempat pembuangan akhir (TPA) yang semakin padat, dan mengurangi biaya pengangkutan serta pengelolaan sampah oleh pemerintah.
+            </p>
+          </section>
+
+          <section>
+            
+            <img src="assets/fotoaff.jpg" alt="2. Mengahasilkan Pupuk Alami Yang Kaya Nutrisi" class="featured-image" />
+            <p>
+              Kompos adalah pupuk alami yang kaya akan nutrisi penting seperti nitrogen, fosfor, dan kalium, yang semuanya penting untuk pertumbuhan tanaman. Nutrisi ini dilepaskan secara perlahan ke dalam tanah sehingga tanaman mendapatkan pasokan nutrisi yang stabil. Ini berbeda dengan pupuk kimia sintetis yang bisa melepaskan nutrisi terlalu cepat dan dalam jumlah besar, yang dapat menyebabkan ketidakseimbangan nutrisi bagi tanaman. Kompos juga mengandung mikroba yang bermanfaat yang membantu memecah bahan organik dan meningkatkan kualitas tanah.
+            </p>
+            <img src="assets/fotoaff.jpg" alt="3. Memperbaiki Struktur Tanah" class="featured-image" />
+            <p>
+              Kompos memperbaiki struktur tanah dengan membuat tanah lebih gembur dan lebih mudah diolah. Tanah yang gembur memungkinkan akar tanaman tumbuh lebih kuat dan menyebar lebih luas. Selain itu, tanah yang dikomposkan memiliki aerasi yang lebih baik, memungkinkan akar mendapatkan lebih banyak oksigen, yang sangat penting untuk pertumbuhan tanaman yang sehat. Tanah liat yang keras bisa diperbaiki dengan kompos, karena kompos membantu melembutkan teksturnya dan meningkatkan drainase, sementara tanah berpasir yang cepat mengering bisa dibuat lebih tahan air dengan penambahan kompos
+
+            </p>
+          </section>
+        </article>
+      </div>
+
+      
+    </main>
+
+    <footer>
+      <p>
+        Kelompok 3 &#169; 2024, KompasKompos
+      </p>
+    </footer>
+
+    <!--saya menambahkan fungsi javascript. agar ketika salah satu nav di klik, 
+                    posisi stop atau tempat berhenti konten, navbarnya tidak menutupi/berada di atas h2-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarHeight = document.querySelector("nav").offsetHeight
+        document.querySelectorAll("nav a").forEach((anchor) => {
+          anchor.addEventListener("click", function (event) {
+            const targetId = this.getAttribute("href").substring(1)
+            const targetElement = document.getElementById(targetId)
+            if (targetElement) {
+              event.preventDefault()
+              window.scrollTo({
+                top: targetElement.offsetTop - navbarHeight,
+                behavior: "smooth",
+              })
+            }
+          })
+        })
+      })
+    </script>
+  </body>
 </html>
+
+

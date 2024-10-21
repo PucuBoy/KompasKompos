@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>card3</title>
-</head>
-<body>
-    
-</body>
+    <title>Timnas Sepak Bola Indonesia</title>
+    <link rel="stylesheet" href="card.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <ul class="menu-items">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#pengenalan">Pengenalan</a></li>
+            <li><a href="#pengertian">Pengertian</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article id="Metode">
+        <h2>Metode</h2>
+        <img
+          src="assets/fotogbk.jpg"
+          alt="Komposting terbuka"
+          class="featured-image"
+        />
+        <p>
+          metode pembuatan kompos yang dilakukan tanpa menggunakan wadah atau
+          kontainer tertutup. Dalam metode ini, bahan-bahan organik, seperti
+          sisa makanan, daun, rumput, dan limbah kebun, dikumpulkan dan disusun
+          dalam tumpukan di area terbuka, seperti halaman rumah atau kebun.
+        </p>
+        <img
+          src="assets/fotogbk.jpg"
+          alt="Komposting tertutup"
+          class="featured-image"
+        />
+        <p>
+          adalah metode pembuatan kompos yang dilakukan dengan menggunakan wadah
+          atau kontainer tertutup untuk menampung bahan-bahan organik. Metode
+          ini dirancang untuk mengontrol proses penguraian bahan organik dengan
+          lebih baik, menjaga kelembapan, dan mengurangi bau serta risiko
+          menarik hama. Komposting tertutup sering kali dilakukan menggunakan
+          komposter yang tersedia di pasaran atau bisa juga menggunakan wadah
+          yang dibuat sendiri.
+        </p>
+        <img
+          src="assets/fotogbk.jpg"
+          alt="Vermikomposting"
+          class="featured-image"
+        />
+        <p>
+          metode pembuatan kompos yang menggunakan cacing, terutama cacing
+          tanah, untuk menguraikan bahan organik dan menghasilkan pupuk organik
+          yang kaya nutrisi. Proses ini memanfaatkan aktivitas biologis cacing
+          yang membantu mempercepat penguraian bahan organik dan meningkatkan
+          kualitas kompos yang dihasilkan.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>Kelompok 3 &#169; 2024, KompasKompos</p>
+    </footer>
+
+    <!--saya menambahkan fungsi javascript. agar ketika salah satu nav di klik, 
+                    posisi stop atau tempat berhenti konten, navbarnya tidak menutupi/berada di atas h2-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarHeight = document.querySelector("nav").offsetHeight;
+        document.querySelectorAll("nav a").forEach((anchor) => {
+          anchor.addEventListener("click", function (event) {
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              event.preventDefault();
+              window.scrollTo({
+                top: targetElement.offsetTop - navbarHeight,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
