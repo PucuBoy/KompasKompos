@@ -142,7 +142,7 @@ i {
 }
 
 .card:hover {
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
 }
 
 .card img {
@@ -175,7 +175,7 @@ i {
 
 @media (min-width: 768px) {
   .card {
-    width: 30%; 
+    width: 30%;
   }
 }
 
@@ -193,7 +193,7 @@ i {
 .about-section {
   padding: 20px 20px;
   background-color: #f0f0f0;
-  text-align:  justify;
+  text-align: justify;
 }
 
 .about-section h2 {
@@ -233,38 +233,86 @@ i {
   color: #333;
 }
 
+.contact-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
 .team-members {
   display: flex;
-  overflow-x: auto;
-  padding: 20px 0; 
-  scrollbar-width: thin; 
+  justify-content: flex-start;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+  padding: 10px 0;
 }
 
 .team-member {
-  flex: 0 0 200px; 
-  margin: 0 10px; 
+  min-width: 300px;
+  margin: 20px;
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .team-member img {
   border-radius: 50%;
   margin-bottom: 10px;
-  width: 80px; 
-  height: 80px; 
+  width: 100px;
+  height: 100px;
 }
 
 .team-member h4 {
-  color: #333; 
+  font-size: 1.2em;
+  color: #333;
 }
 
 .team-member p {
-  color: #666; 
+  color: #666;
 }
 
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Navigation buttons */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #218838;
+}
 
 @media (max-width: 768px) {
   /* logika h2 ke mobile */

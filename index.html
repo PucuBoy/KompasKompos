@@ -70,8 +70,9 @@
         </section>
 
         <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Kelompok Kami</h2>
+            <h2>Kelompok Kami</h2>
+            <div class="contact-container">
+                <button class="prev-btn" onclick="scrollPrev()">&#10094;</button>
                 <div class="team-members">
                     <div class="team-member">
                         <img src="assets/foto1.jpg" alt="Member 1" width="100" height="100">
@@ -116,31 +117,10 @@
                         <p>Role: apa yak</p>
                     </div>
                 </div>
+                <button class="next-btn" onclick="scrollNext()">&#10095;</button>
             </div>
         </section>
-        
-        
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const navbarHeight = document.querySelector("nav").offsetHeight;
-
-                // Smooth scroll for all nav links and angle-down icon
-                document.querySelectorAll("nav a, .angle-down-icon a").forEach(anchor => {
-                    anchor.addEventListener("click", function(event) {
-                        const targetId = this.getAttribute("href").substring(1);
-                        const targetElement = document.getElementById(targetId);
-                        if (targetElement) {
-                            event.preventDefault();
-                            window.scrollTo({
-                                top: targetElement.offsetTop - navbarHeight,
-                                behavior: "smooth"
-                            });
-                        }
-                    });
-                });
-            });
-
-        </script>
+    <script src="script.js"></script>
     </body>
 </html>
