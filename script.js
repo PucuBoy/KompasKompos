@@ -1,29 +1,50 @@
-const carousel = document.querySelector(".team-members")
-let currentIndex = 0
-const cardWidth = 340 // Approx width of each card + margin
-const visibleCards = 3 // How many cards to show
+const carousel = document.querySelector('.carousel');
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+let visibleItems = 4; // Default jumlah item yang terlihat sekaligus di desktop
+const intervalTime = 5000; // Waktu pergeseran otomatis dalam milidetik
 
-// Calculate how many cards you can scroll to
-const maxIndex = Math.ceil(carousel.children.length / visibleCards) - 1
-
-function scrollNext() {
-  if (currentIndex < maxIndex) {
-    currentIndex++
-    updateCarouselPosition()
+// Fungsi untuk menentukan jumlah item yang terlihat berdasarkan ukuran layar
+function updateVisibleItems() {
+  if (window.innerWidth <= 768) {
+    visibleItems = 1; // Jika ukuran layar <= 768px, tampilkan 1 item
+  } else {
+    visibleItems = 4; // Di ukuran layar lebih besar, tampilkan 4 item
   }
 }
 
-function scrollPrev() {
-  if (currentIndex > 0) {
-    currentIndex--
-    updateCarouselPosition()
-  }
+// Mengatur pergeseran carousel
+function updateCarousel() {
+  const newTransformValue = -(currentIndex * (100 / visibleItems));
+  carousel.style.transform = `translateX(${newTransformValue}%)`;
 }
 
-function updateCarouselPosition() {
-  const newPosition = -currentIndex * cardWidth * visibleCards
-  carousel.style.transform = `translateX(${newPosition}px)`
+// Geser ke item berikutnya
+function nextItem() {
+  currentIndex = (currentIndex + 1) % (totalItems - visibleItems + 1);
+  updateCarousel();
 }
+
+// Geser ke item sebelumnya
+function prevItem() {
+  currentIndex = (currentIndex - 1 + (totalItems - visibleItems + 1)) % (totalItems - visibleItems + 1);
+  updateCarousel();
+}
+
+// Tombol navigasi manual
+document.querySelector('.carousel-next').addEventListener('click', nextItem);
+document.querySelector('.carousel-prev').addEventListener('click', prevItem);
+
+// Pergeseran otomatis setiap interval waktu
+setInterval(nextItem, intervalTime);
+
+// Perbarui jumlah item yang terlihat saat ukuran layar berubah
+window.addEventListener('resize', updateVisibleItems);
+
+// Jalankan update jumlah item yang terlihat saat halaman dimuat pertama kali
+updateVisibleItems();
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const navbarHeight = document.querySelector("nav").offsetHeight

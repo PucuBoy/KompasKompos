@@ -233,88 +233,66 @@ i {
   color: #333;
 }
 
-.contact-container {
+.carousel-container {
   position: relative;
-  overflow: hidden;
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
 }
 
-.team-members {
+.carousel {
   display: flex;
-  justify-content: flex-start;
   transition: transform 0.5s ease-in-out;
-  width: fit-content;
-  padding: 10px 0;
 }
 
-.team-member {
-  min-width: 300px;
-  margin: 20px;
+.carousel-item {
+  min-width: 25%; /* Tampilkan 4 item sekaligus */
+  box-sizing: border-box;
+  padding: 10px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.team-member img {
+.carousel-item img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
-}
-
-.team-member h4 {
-  font-size: 1.2em;
-  color: #333;
-}
-
-.team-member p {
-  color: #666;
+  object-fit: cover;
 }
 
 button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px;
+  background-color: #dff5e3;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-button:hover {
-  background-color: #218838;
-}
-
-/* Navigation buttons */
-.prev-btn,
-.next-btn {
+.carousel-prev,
+.carousel-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #28a745;
-  color: white;
+  background-color: white;
   border: none;
-  padding: 10px;
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
-  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.prev-btn {
+.carousel-prev {
   left: 10px;
 }
 
-.next-btn {
+.carousel-next {
   right: 10px;
 }
 
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: #218838;
-}
 
 @media (max-width: 768px) {
+  
   /* logika h2 ke mobile */
   .intro-section h2 {
     text-align: left;
@@ -331,4 +309,20 @@ button:hover {
   .navbar-container {
     justify-content: center;
   }
+
+  /* logika bagian kontak */
+  .carousel-item {
+    min-width: 100%; /* Hanya tampilkan satu item */
+  }
+
+  .carousel {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Tombol navigasi manual di mode mobile */
+  .carousel-prev, .carousel-next {
+    font-size: 20px;
+    padding: 8px;
+  }
+
 }
