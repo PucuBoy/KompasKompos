@@ -12,7 +12,7 @@ body {
 /* header geiz */
 
 header {
-  background: url(assets/kompos.jpeg) no-repeat center center/cover;
+  background: url(assets/kompos3.jpg) no-repeat center center/cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,32 +22,39 @@ header {
 }
 
 .intro h1 {
-  font-size: 1.5em;
+  margin-top: -10%;
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .angle-down-icon {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  border: 3px solid #ffff;
-  border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
-.angle-down-icon a,
-i {
-  text-decoration: none;
-  font-style: normal;
-  color: white;
-  padding: 7px;
-  z-index: 999;
+.panah-bawah a, i{
+  color: black; 
+  font-size: 24px;
+  margin-right: 10px; 
 }
 
 /* navbar nih */
 .navbar {
   width: 100%;
-  background-color: rgb(103, 152, 110);
+  background-color: #6db472;
   padding: 14px;
   position: sticky;
   top: 0;
@@ -190,24 +197,80 @@ i {
   color: white;
 }
 
-.about-section {
-  padding: 20px 20px;
-  background-color: #f0f0f0;
-  text-align: justify;
+.about-container {
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+  margin: 0 auto;
 }
 
-.about-section h2 {
+.about-image {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.about-image img {
+  width: 70%;
+  max-width: 280px;
+  border-radius: 10px;
+  margin-left: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  flex: 1;
+  padding-left: 5px;
+  margin-left: -100px;
+}
+
+.about-content h2 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #333;
 }
 
-.about-section p {
-  font-size: 1em;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 20px auto;
+.about-content p {
+  font-size: 1.1em;
   line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-content .social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #555;
+  margin-right: 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #28a745; /* Warna hover */
+}
+
+.contact-btn  {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contact-btn:hover {
+  background-color: #218838;
 }
 
 /* bagian contact */
@@ -229,7 +292,7 @@ i {
 
 .contact-section h2 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-top: 55px;
   color: #333;
 }
 
@@ -292,12 +355,6 @@ button {
 
 
 @media (max-width: 768px) {
-  
-  /* logika h2 ke mobile */
-  .intro-section h2 {
-    text-align: left;
-  }
-
   /* logika navbar ke mobile */
   .navbar {
     padding: 24px;
@@ -308,6 +365,28 @@ button {
   }
   .navbar-container {
     justify-content: center;
+  }
+
+  /* logika about */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-image img {
+    width: 100%; /* Lebar gambar 100% saat mobile */
+    margin-left: 0;
+    max-width: none; /* Menghilangkan batas maksimal saat mobile */
+  }
+
+  .about-content {
+    padding-left: 0;
+    margin-left: 0;
   }
 
   /* logika bagian kontak */

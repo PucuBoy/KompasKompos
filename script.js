@@ -45,22 +45,34 @@ window.addEventListener('resize', updateVisibleItems);
 // Jalankan update jumlah item yang terlihat saat halaman dimuat pertama kali
 updateVisibleItems();
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  const navbarHeight = document.querySelector("nav").offsetHeight
+  const navbarHeight = document.querySelector("nav").offsetHeight;
 
   // Smooth scroll for all nav links and angle-down icon
   document.querySelectorAll("nav a, .angle-down-icon a").forEach((anchor) => {
     anchor.addEventListener("click", function (event) {
-      const targetId = this.getAttribute("href").substring(1)
-      const targetElement = document.getElementById(targetId)
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        event.preventDefault()
+        event.preventDefault();
         window.scrollTo({
           top: targetElement.offsetTop - navbarHeight,
           behavior: "smooth",
-        })
+        });
       }
-    })
-  })
-})
+    });
+  });
+
+  // Smooth scroll for Contact Us button in About section
+  document.querySelector('.contact-btn').addEventListener('click', function(event) {
+    const targetElement = document.querySelector('#contact');
+    const navbarHeight = document.querySelector("nav").offsetHeight;
+    if (targetElement) {
+      event.preventDefault();
+      window.scrollTo({
+        top: targetElement.offsetTop - navbarHeight, // Scroll offset to account for the navbar height
+        behavior: 'smooth'
+      });
+    }
+  });
+});
