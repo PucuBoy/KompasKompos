@@ -31,24 +31,25 @@ header {
 }
 
 .angle-down-icon {
-    position: absolute;
-    bottom: 40px;
-    width: 100%;
-    text-align: center;
-    color: #ffffff;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
-.panah-bawah a, i{
-  color: black; 
+.panah-bawah a,
+i {
+  color: white;
   font-size: 24px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 /* navbar nih */
@@ -244,7 +245,7 @@ header {
   margin-bottom: 20px;
 }
 
-.social-icons a {
+.social-icons a i {
   text-decoration: none;
   color: #555;
   margin-right: 10px;
@@ -252,11 +253,11 @@ header {
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-icons a:hover i {
   color: #28a745; /* Warna hover */
 }
 
-.contact-btn  {
+.contact-btn {
   display: inline-block;
   padding: 10px 20px;
   background-color: #28a745;
@@ -353,7 +354,6 @@ button {
   right: 10px;
 }
 
-
 @media (max-width: 768px) {
   /* logika navbar ke mobile */
   .navbar {
@@ -399,9 +399,9 @@ button {
   }
 
   /* Tombol navigasi manual di mode mobile */
-  .carousel-prev, .carousel-next {
+  .carousel-prev,
+  .carousel-next {
     font-size: 20px;
     padding: 8px;
   }
-
 }
