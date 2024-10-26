@@ -7,6 +7,8 @@
 
 body {
   scroll-behavior: smooth;
+  background-color: #F3EDE4;
+  color: #4E342E;
 }
 
 /* header geiz */
@@ -55,7 +57,7 @@ i {
 /* navbar nih */
 .navbar {
   width: 100%;
-  background-color: #6db472;
+  background-color: #8B5E3C;
   padding: 14px;
   position: sticky;
   top: 0;
@@ -80,7 +82,7 @@ i {
 }
 
 .menu-items li a {
-  color: white;
+  color: #F3EDE4;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -88,20 +90,20 @@ i {
 }
 
 .menu-items li a:hover {
-  color: #333;
+  color: #3E2723;
 }
 
 /* Bagian Home */
 
 #home {
-  background: linear-gradient(to top, #76c47b, #ffffff 85%);
+  background: linear-gradient(to top, #b79a91, #f6ecde 90%);
   padding: 40px 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #4E342E;
 }
 
 .intro-section {
@@ -137,7 +139,7 @@ i {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 248, 240, 0.8);
   border: none;
   border-radius: 15px;
   padding: 20px;
@@ -170,15 +172,15 @@ i {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #28a745;
-  color: white;
+  background-color: #8B5E3C;
+  color: #F3EDE4;
   text-decoration: none;
   border-radius: 15px;
   transition: background-color 0.3s ease;
 }
 
 .card a:hover {
-  background-color: #218838;
+  background-color: #6D4C41;
 }
 
 @media (min-width: 768px) {
@@ -189,7 +191,7 @@ i {
 
 /* bagian about */
 #about {
-  background: linear-gradient(to bottom, #76c47b, #ffffff 85%);
+  background: linear-gradient(to bottom, #b79a91, #f6ecde 85%);
   padding: 40px 0;
   min-height: 100vh;
   display: flex;
@@ -231,13 +233,13 @@ i {
 .about-content h2 {
   font-size: 2.5em;
   margin-bottom: 15px;
-  color: #333;
+  color: #3E2723;
 }
 
 .about-content p {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #666;
+  color: #5D4037;
   margin-bottom: 20px;
   text-align: justify;
 }
@@ -277,7 +279,7 @@ i {
 
 /* bagian contact */
 #contact {
-  background: linear-gradient(to top, #76c47b, #ffffff 85%);
+  background: linear-gradient(to top, #b79a91, #f6ecde 85%);
   padding: 40px 0;
   min-height: 100vh;
   display: flex;
@@ -337,8 +339,8 @@ i {
 .carousel-item a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #dff5e3;
-  color: #333;
+  background-color: #D7CCC8;
+  color: #3E2723;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -347,7 +349,7 @@ i {
 }
 
 .carousel-item a:hover {
-  background-color: #cbe3d0;
+  background-color: #A1887F;
 }
 
 .carousel-prev,
