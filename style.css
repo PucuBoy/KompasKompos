@@ -205,6 +205,7 @@ header {
   padding: 10px;
   gap: 10px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .about-image {
@@ -323,12 +324,29 @@ header {
   object-fit: cover;
 }
 
-button {
-  background-color: #dff5e3;
-  border: none;
+.carousel-item h4, p {
+  text-align: center;
+  color: black;
+}
+
+.carousel-item li {
+  list-style: none;
+}
+
+.carousel-item a {
+  display: inline-block;
   padding: 10px 20px;
-  cursor: pointer;
+  background-color: #dff5e3;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
   margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-item a:hover {
+  background-color: #cbe3d0;
 }
 
 .carousel-prev,
@@ -371,6 +389,7 @@ button {
   .about-container {
     flex-direction: column;
     text-align: center;
+    margin-top: 0;
   }
 
   .about-image {
