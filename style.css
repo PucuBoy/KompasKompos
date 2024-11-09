@@ -362,13 +362,11 @@ i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: white;
+  background-color: transparent;
   border: none;
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-prev {
@@ -457,10 +455,14 @@ i {
     transition: transform 0.5s ease-in-out;
   }
 
+  .carousel-container {
+    margin-top: 15%;
+  }
+
   /* Tombol navigasi manual di mode mobile */
   .carousel-prev,
   .carousel-next {
     font-size: 20px;
-    padding: 8px;
+    padding: 50px;
   }
 }
