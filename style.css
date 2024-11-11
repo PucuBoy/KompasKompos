@@ -438,7 +438,7 @@ i {
   .about-image img {
     width: 100%; /* Lebar gambar 100% saat mobile */
     margin-left: 0;
-    max-width: none; /* Menghilangkan batas maksimal saat mobile */
+    max-width: none;
   }
 
   .about-content {
