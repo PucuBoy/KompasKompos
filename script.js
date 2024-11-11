@@ -3,7 +3,7 @@ let currentIndex = 0;
 const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
 let visibleItems = 4; // Default jumlah item yang terlihat sekaligus di desktop
-const intervalTime = 5000; // Waktu pergeseran otomatis dalam milidetik
+const intervalTime = 6000; // Waktu pergeseran otomatis dalam milidetik
 
 // Fungsi untuk menentukan jumlah item yang terlihat berdasarkan ukuran layar
 function updateVisibleItems() {
