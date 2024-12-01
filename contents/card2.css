@@ -1,0 +1,165 @@
+body {
+    font-family: "Outfit", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  header {
+    display: inline;
+  }
+  
+  /* navbar */
+  nav {
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(110, 154, 112, 1);
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 9rem;
+  }
+  
+  .back-icon {
+    font-size: 20px;
+    color: #6e9a70;
+    text-decoration: none;
+    margin-right: auto;
+  }
+  
+  .menu-items {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+  }
+  
+  nav li {
+    list-style-type: none;
+  }
+  
+  nav a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #6e9a70;
+    margin: 10px;
+  }
+  
+  
+  nav a:hover {
+    font-weight: bold;
+  }
+  
+  /* content */
+  .content-wrapper {
+    display: flex;
+    justify-content: center; 
+  }
+  
+  #content {
+    max-width: 1200px;
+    width: 100%; 
+    padding: 10px; 
+  }
+  
+  article p {
+    line-height: 1.4; 
+    margin-bottom: 10px;
+    text-align: justify; 
+  }
+  
+  h2,
+  h3 {
+    color: #6e9a70;
+  }
+  
+  h4 {
+    color: #6e9a70;
+    text-align: left;
+  }
+  
+  .featured-image {
+    width: 100%;
+    max-height: 250px;
+    border-radius: 5px;
+  }
+  
+  .gepeng {
+    width: 60%;
+    max-height: 250px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; 
+  }
+
+  .lanjut a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #6e9a70;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* footer */
+  footer {
+    padding: 20px;
+    color: white;
+    background-color: #6e9a70;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Media Queries */
+  /* desktop */
+  @media screen and (min-width: 768px) {
+    #content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5rem;
+    }
+  }
+  
+  /* mobile */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      justify-content: center;
+    }
+  
+    .back-icon {
+        position: absolute;
+        left: 10px; 
+    }
+    
+    nav ul {
+        position: relative;
+        left: 55px;
+        padding: 16px;
+        width: 100%;
+    }
+  
+    #content {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+  }
+  

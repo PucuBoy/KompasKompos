@@ -110,26 +110,18 @@ footer {
 
 /* mobile */
 @media screen and (max-width: 768px) {
+
   .navbar-container {
     justify-content: center;
   }
 
-  nav ul {
-    justify-content: center;
-    padding: 16px;
-    width: 100%;
-  }
-
   .back-icon {
-    display: none;
+      position: relative;
+      right: 100%; 
   }
 
   #content {
     flex-flow: column wrap;
     padding: 0;
-  }
-
-  #pengenalan-kompos {
-    max-width: 100%;
   }
 }

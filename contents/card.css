@@ -158,14 +158,14 @@ footer {
     justify-content: center;
   }
 
-  nav ul {
-    justify-content: center;
-    padding: 16px;
-    width: 100%;
+  .back-icon {
+    position: absolute;
+    left: 10px; 
   }
 
-  .back-icon {
-    display: none;
+  nav ul {
+    padding: 16px;
+    width: 100%;
   }
 
   #content {
